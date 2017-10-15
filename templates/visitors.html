@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="static/styles.css">
+    <meta charset="UTF-8">
+    <title>Visitors</title>
+</head>
+<body>
+<div id="list3">
+    <ul>
+    {% for visitor in visitors %}
+    <li>{{ visitor.name }}</li>
+    {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

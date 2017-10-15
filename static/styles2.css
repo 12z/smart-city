@@ -1,0 +1,9 @@
+
+{ }
+ul { list-style-image: url("../static/message.png");
+       font-size:20px;
+       margin-left: 2cm;
+}
+
+ul li { line-height:40px;
+    vertical-align: middle;}

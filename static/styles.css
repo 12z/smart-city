@@ -1,0 +1,9 @@
+
+{ }
+ul { list-style-image: url("../static/head.png");
+       font-size:50px;
+       margin-left: 2cm;
+}
+
+ul li { line-height:40px;
+    vertical-align: middle;}

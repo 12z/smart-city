@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gate</title>
+</head>
+<body>
+<div id="gate" style="position:absolute; width:100%; height:250>
+ <img src="img.png">
+</div>
+</body>
+</html>
+
+<script>
+
+function update() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            document.getElementById("gate").innerHTML = "<img src=\""+ myObj.link +"\">";
+        }
+    };
+    xhttp.open("GET", "get_gate", true);
+    xhttp.send();
+}    <!--var num = 0, style = document.getElementById('container').style;-->
+
+
+function looper() {
+    setInterval(update, 2000);
+
+}
+
+function starter() {
+    looper();
+}
+window.onload=starter;
+
+</script>
